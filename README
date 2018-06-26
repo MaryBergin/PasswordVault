@@ -1,0 +1,59 @@
+************************************************
+Mary Bergin 			1012219
+CIS*2520				Assignment 2
+06/25/18				mbergin@uoguelph.ca
+************************************************
+
+
+**********************
+Program Description
+**********************
+This program is a Password Vault that allows a user to open, create, access,
+and edit an encryped binary file containing their passwords
+
+**************
+Data Storage
+**************
+Data is stored in a binary file, allowing it to be easily accessed within
+the program but not readable through the file.
+
+************
+Compilation
+************
+To compile the testing program:
+run: make
+
+To compile only the code:
+run: make prog
+
+Other Make Options:
+
+run cppcheck: runs the cppcheck option
+run doxy: creates the doxygen documentation
+make clean: removes executables
+
+
+
+****************************************
+Known Limitations, Issues, and Errors
+****************************************
+
+Opening an existing file does not work
+No test file is provided
+
+****************************************
+Complexity
+****************************************
+
+createTable: O(1)
+-A simple table creation will always have the same outcome
+
+createNode: O(1)
+-Simple node creation will always have the same outcome
+
+DestroyTable: O(N^3)
+-The table and it's internal lists must be iterated through and deltetd
+
+InsertData: O(N^5)
+-There are several places that the data can be inserted, ie a collision resolution
+is needed
